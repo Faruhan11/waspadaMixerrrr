@@ -1,0 +1,122 @@
+html {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%,#090a0f 100%);
+}
+body{
+  background: none;
+}
+
+.navbar{
+  padding: 0;
+  font-size: 20px;
+}
+.navbar-foto{
+  margin-right: 5px;
+  padding-top: 5px;
+
+}
+.judul{
+    font-family: 'Press Start 2P', cursive;
+    height: 60vh;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+    color: #fff700;
+    text-shadow: 0 0 10px #fff82d;
+
+
+}
+.judul-foto{
+  margin: 20px;
+  height: 35vh;
+  width: 35vh;
+  box-shadow: -2px 1px 119px -25px rgba(255,255,255,1);
+-webkit-box-shadow: -2px 1px 119px -25px rgba(255,255,255,1);
+-moz-box-shadow: -2px 1px 119px -25px rgba(255,255,255,1);
+}
+.judul-text{
+  font-size: 240%;
+}
+
+.button-container{
+  display: block;
+  justify-content: center;
+  text-align: center;
+  height: 40vh;
+}
+
+.btn-text{
+  position: relative;
+  transform: translateY(-50%);
+  font-size: 120%;
+  color: #ffffff;
+
+}
+
+.btn {
+  height: 20vh;
+  width: 40vh;
+  margin: 1% 3%;
+  border: none;
+  outline: none;
+  color: #FFF;
+  font-size: larger;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+}
+.btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/* glow */
+.btn::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #FF0000, #FF7300, #FFFB00, #48FF00,
+    #00FFD5, #002BFF, #FF00C8, #FF0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height:  calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+/* hover */
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn:active:after {
+  background: transparent;
+}
+
+.btn:active {
+  color: #000000;
+  font-weight: bold;
+}
+
