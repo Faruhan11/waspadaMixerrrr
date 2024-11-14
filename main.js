@@ -9,19 +9,16 @@ function shuffle(array) {
     }
 }
 function errorTest() {
-    for(let i = 0; i < 21; i+=2) {
-        if(students_F[i] == n) {
-            if(students_F[i+1] == c || students_F[i+1] == d) {
-                return true;
-            }
-        } else if(students_F[i+1] == n) {
-            if(students_F[i] == c || students_F[i] == d) {
-                return true;
-            }
-        }
+   
+    let indexN = students_F.indexOf(n);
+    let indexC = students_F.indexOf(c);
+    let indexD = students_F.indexOf(d);
+
+    if ((Math.abs(indexN - indexC) === 1) || (Math.abs(indexN - indexD) === 1)) {
+        return true;
     }
     return false;
-        }
+}
 
 let k = 609;
 let intervalId; 
