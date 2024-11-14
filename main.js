@@ -1,7 +1,6 @@
 let students_M = ["   fay  ", "  apdal ", "  rehan ", " ripki  ", "  nadip ", "  bany  ", "  adit  ", "himendra", "  irsat ", " basmi  ", "om nanda", " dipan  ", " farhan ", "  aldi  "];
-let students_F = ["   al   ", "sipapasi", "   eca  ", "  ibu   ", " wilda  ", "  feli  ", "   el   ", "  kiran ", " tazkia ", " devni  ", "  alika ", "  neta  ", "  riri  ", "  cella ", " sofia  ", "  aura  ", " yuyuayu", "   cia  ", "  josu  ", "   dea  ", "  nindi ", "  andin "];
+let students_F = ["   al   ", "sipapasi", "   eca  ", "  ibu   ", " wilda  ", "  feli  ", "   el   ", "  kiran ", " tazkia ", " devni  ", "  alika ", "  neta  ", "  riri  ", "  cella ", " sofia  ", "  aura  ", " yuyuayu", "   cia  ", "  josu  ", "   dea  ", "  nindi ", "  andin "];let n = students_F[11];let c = students_F[17];let d = students_F[19];
 let chmate = Array.from({ length: 18 }, () => Array(2).fill(""));
-
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -9,7 +8,20 @@ function shuffle(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
-
+function errorTest() {
+    for(let i = 0; i < 21; i+=2) {
+        if(students_F[i] == n) {
+            if(students_F[i+1] == c || students_F[i+1] == d) {
+                return true;
+            }
+        } else if(students_F[i+1] == n) {
+            if(students_F[i] == c || students_F[i] == d) {
+                return true;
+            }
+        }
+    }
+    return false;
+        }
 
 let k = 609;
 let intervalId; 
@@ -19,6 +31,9 @@ let backgroundSound = document.getElementById("backgroundSound");
 function updateText() {
     shuffle(students_F);
     shuffle(students_M);
+    while(errorTest()) {
+        shuffle(students_F);
+    };
     let i = 0;
     for (let m = 0; m < 14; m++, i++) {
         chmate[i][0] = students_M[m];
