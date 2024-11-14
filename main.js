@@ -73,12 +73,7 @@ let timer;
 document.addEventListener('click', stopLoop);
 document.addEventListener("touchstart", function() {
                 timer =setTimeout(function() {
-                    for(let i = 0; i < 18; i++){
-
-                        for(let j = 0; j < 2; j++){
-                            document.getElementById('${i}${j}').innerHTML = haha[i][j];
-                        }
-                    }
+                 
                     stopLoop();
                 
                  }, 2000); // 2000 milliseconds = 2 seconds
