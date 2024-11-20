@@ -15,6 +15,7 @@ html {
         
     }
     .homoS{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         height: 60vh;
         display: block;
         justify-content: center;
