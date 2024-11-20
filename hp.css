@@ -1,12 +1,28 @@
-.homoS{
-    font-family: "Times New Roman", Times, serif;
-    height: 60vh;
-    display: block;
-    justify-content: center;
-    text-align: center;
-    background-color: transparent;
-    color: #fff700;
-    text-shadow: 0 0 10px #fff82d;
-    font-size: 500%;
-    margin-top: 20vh;
+html {
+    background: radial-gradient(ellipse at bottom, #1b2735 0%,#090a0f 100%);
 }
+  body{
+    background: none;
+  }
+  
+  .navbar{
+      padding: 0;
+      font-size: 20px;
+    }
+    .navbar-foto{
+        margin-right: 5px;
+        padding-top: 5px;
+        
+    }
+    .homoS{
+        font-family: 'Press Start 2P', cursive;
+        height: 60vh;
+        display: block;
+        justify-content: center;
+        text-align: center;
+        background-color: transparent;
+        color: #fff700;
+        text-shadow: 0 0 10px #fff82d;
+        font-size: 500%;
+        margin-top: 20vh;
+    }
