@@ -7,6 +7,13 @@ function shuffle(array) {
 }
 function chooseHim() {
     shuffle(semua);
+    shuffle(semua);
+    shuffle(semua);
+    shuffle(semua);
+    shuffle(semua);
+    shuffle(semua);
+    shuffle(semua);
+    shuffle(semua);
     document.getElementById("him").innerHTML = semua[1];
 }
 document.addEventListener('click', chooseHim);
