@@ -63,6 +63,7 @@ function updateText() {
         chmate[i][0] = students_F[f];
         chmate[i][1] = students_F[++f];
     }
+    shuffle(chmate);
     while(errorTest2()) {
         shuffle(chmate);
     };
