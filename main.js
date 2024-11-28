@@ -37,7 +37,7 @@ function errorTest2(){
         return true;
     }
     
-    if(Math.abs((indexFi - indexAn) > 1)){
+    if(Math.abs((indexFi - indexAn) !== 1)){
         return true;
     }
     return false;
