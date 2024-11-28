@@ -33,7 +33,7 @@ function errorTest2(){
     let indexFi = dimana(fi);
     let indexAn = dimana(an);
     
-    if(indexFi == 0 || indexFi == 5 || indexFi == 9 || indexFi == 13 ){
+    if(indexFi === 0 || indexFi === 5 || indexFi === 9 || indexFi === 13 ){
         return true;
     }
     
@@ -95,17 +95,10 @@ function stopLoop() {
 let timer;
 // Attach the event listener to the document
 document.addEventListener('click', stopLoop);
-document.addEventListener("touchstart", function() {
-                timer =setTimeout(function() {
-                 
-                    stopLoop();
-                
-                 }, 2000); // 2000 milliseconds = 2 seconds
-            });
 
 
 // Start the loop, updating every 1 second (1000 milliseconds)
-intervalId = setInterval(updateText, 150);
+intervalId = setInterval(updateText, 100);
 
 
 
