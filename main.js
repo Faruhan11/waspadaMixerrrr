@@ -1,5 +1,5 @@
 let students_M = ["   fay  ", "  apdal ", "  rehan ", " ripki  ", "  nadip ", "  bany  ", "  adit  ", "himendra", "  irsat ", " basmi  ", "om nanda", " dipan  ", " farhan ", "  aldi  "];let fi = students_M[12];
-let students_F = ["   al   ", "sipapasi", "   eca  ", "  ibu   ", " wilda  ", "  feli  ", "   el   ", "  kiran ", " tazkia ", " devni  ", "  alika ", "  neta  ", "  riri  ", "  cella ", " sofia  ", "  aura  ", " yuyuayu", "   cia  ", "  josu  ", "   dea  ", "  nindi ", "  andin "];let n = students_F[11];let c = students_F[17];let d = students_F[19];let an = students_F[2];
+let students_F = ["   al   ", "sipapasi", "   eca  ", "  ibu   ", " wilda  ", "  feli  ", "   el   ", "  kiran ", " tazkia ", " devni  ", "  alika ", "  neta  ", "  riri  ", "  cella ", " sofia  ", "  aura  ", " yuyuayu", "   cia  ", "  josu  ", "   dea  ", "  nindi ", "  andin "];let n = students_F[11];let c = students_F[17];let d = students_F[19];let an = students_F[21];
 let chmate = Array.from({ length: 18 }, () => Array(2).fill(""));
 
 function shuffle(array) {
