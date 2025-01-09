@@ -1,5 +1,5 @@
-let students_M = ["   fay  ", "  apdal ", "  rehan ", " ripki  ", "  nadip ", "  bany  ", "  adit  ", "himendra", "  irsat ", " basmi  ", "om nanda", " dipan  ", " farhan ", "  aldi  "];
-let students_F = ["   al   ", "sipapasi", "   eca  ", "  ibu   ", " wilda  ", "  feli  ", "   el   ", "  kiran ", " tazkia ", " devni  ", "  alika ", "  neta  ", "  riri  ", "  cella ", " sofia  ", "  aura  ", " yuyuayu", "   cia  ", "  josu  ", "   dea  ", "  nindi ", "  andin "];let n = students_F[11];let c = students_F[17];let d = students_F[19];
+let students_M = ["   fay  ", "  apdal ", "  rehan ", " ripki  ", "  nadip ", "  bany  ", "  adit  ", "himendra", "  irsat ", " basmi  ", "om nanda", " dipan  ", " farhan ", "  aldi  "];let fi = students_M[12];
+let students_F = ["   al   ", "sipapasi", "   eca  ", "  ibu   ", " wilda  ", "  feli  ", "   el   ", "  kiran ", " tazkia ", " devni  ", "  alika ", "  neta  ", "  riri  ", "  cella ", " sofia  ", "  aura  ", " yuyuayu", "   cia  ", "  josu  ", "   dea  ", "  nindi ", "  andin "];let n = students_F[11];let c = students_F[17];let d = students_F[19];let an = students_F[21];
 let chmate = Array.from({ length: 18 }, () => Array(2).fill(""));
 
 function shuffle(array) {
@@ -15,6 +15,24 @@ function errorTest() {
     let indexD = students_F.indexOf(d);
 
     if ((Math.abs(indexN - indexC) === 1) || (Math.abs(indexN - indexD) === 1)) {
+        return true;
+    }
+    return false;
+}
+
+function dimana(x){
+    for(let i = 0; i < 18; i++){
+        if(chmate[i][0] == x || chmate[i][1] == x){
+            return i;
+        }
+    }
+    return 0;
+}
+
+function errorTest2(){
+    let indexFi = dimana(fi);
+    
+    if(indexFi === 0 || indexFi === 5 || indexFi === 9 ){
         return true;
     }
     return false;
@@ -41,6 +59,10 @@ function updateText() {
         chmate[i][1] = students_F[++f];
     }
     shuffle(chmate);
+    while(errorTest2()) {
+        shuffle(chmate);
+    };
+    
 
     for (let i = 0; i < 18; i++) {
         for (let j = 0; j < 2; j++) {
@@ -71,7 +93,7 @@ document.addEventListener('click', stopLoop);
 
 
 // Start the loop, updating every 1 second (1000 milliseconds)
-intervalId = setInterval(updateText, 130);
+intervalId = setInterval(updateText, 100);
 
 
 
@@ -100,105 +122,3 @@ intervalId = setInterval(updateText, 130);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//tadinya mah mau bikin buat acak kelompok + individu, tapi males bjir jadi 2 button di
-//homepage bakal "coming soon" untuk selamanya
-
-//semoga ga duduk di depan, boleh si di depan asal yang pojok, di tengah mah diajak podcast sama pa eman anying
-//semoga yg sebangku bawa buku paket
-//semoga masuk itb
-
-
-//emang doa ngaruh?
-
-
-//idk but the hope itself is pretty like in me (the) dna
-
-
-
-//whoever found this easter egg just keep it yourself bruhh
