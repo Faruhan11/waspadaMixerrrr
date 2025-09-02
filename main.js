@@ -1,5 +1,5 @@
 let students_M = ["   fay  ", "  apdal ", "  rehan ", " ripki  ", "  nadip ", "  bany  ", "  adit  ", "himendra", "  irsat ", " basmi  ", "om nanda", " dipan  ", " farhan ", "  aldi  "];
-let students_F = ["   al   ", "sipapasi", "   eca  ", "  ibu   ", " wilda  ", "  feli  ", "   el   ", "  kiran ", " tazkia ", " devni  ", "  alika ", "  neta  ", "  riri  ", "  cella ", " sofia  ", "  aura  ", " yuyuayu", "   cia  ", "  josu  ", "   dea  ", "  nindi ", "  andin "];
+let students_F = ["   al   ", "sipapasi", "   eca  ", "  ibu   ", " wilda  ", "  feli  ", "   el   ", "  kiran ", " tazkia ", " devni  ", "  alika ", "  neta  ", "  riri  ", "  cella ", " sofia  ", "  aura  ", " yuyuayu", "   cia  ", "  josu  ", "   dea  ", "  nindi ", "  andin "];let n = students_F[11];let c = students_F[17];let d = students_F[19];
 let chmate = Array.from({ length: 18 }, () => Array(2).fill(""));
 
 function shuffle(array) {
@@ -7,6 +7,17 @@ function shuffle(array) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
+}
+function errorTest() {
+   
+    let indexN = students_F.indexOf(n);
+    let indexC = students_F.indexOf(c);
+    let indexD = students_F.indexOf(d);
+
+    if ((Math.abs(indexN - indexC) === 1) || (Math.abs(indexN - indexD) === 1)) {
+        return true;
+    }
+    return false;
 }
 
 let k = 609;
@@ -17,6 +28,8 @@ let backgroundSound = document.getElementById("backgroundSound");
 function updateText() {
     shuffle(students_F);
     shuffle(students_M);
+    while(errorTest()) {
+        shuffle(students_F);
     };
     let i = 0;
     for (let m = 0; m < 14; m++, i++) {
